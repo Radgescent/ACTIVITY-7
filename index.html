@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="nav">
+        <h1>
+            DYNAMICALLY ADDED ROWS USING JS
+        </h1>
+    </nav>
+    <section class="form-section">
+        <div class="form-container">
+            <form id="signup-form" class="form">
+                <div id="form-title">
+                    <h2>
+                        Sign up
+                    </h2>
+                </div>
+                <div id="firstname" class="input-group">
+                    <label for="firstname" class="input-labels">FIRST NAME</label>
+                    <input type="text" name="firstname" id="firstname-input" class="box">
+                    <small id="firstname-error" class="error-message">Please fill out this field.</small>
+                </div>
+                
+                <div id="lastname" class="input-group">
+                    <label for="lastname" class="input-labels">LAST NAME</label>
+                    <input type="text" id="lastname-input" name="lastname" class="box">
+                    <small id="lastname-error" class="error-message">Please fill out this field.</small>
+                </div>
+                
+                <div id="gender" class="input-group">
+                    <label for="gender" class="input-labels">GENDER</label>
+                    <div class="gender-inputs">
+                        <div>
+                            <input type="radio" id="male" name="gender" value="male" required>
+                            <label for="male">Male</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="female" name="gender" value="female" required>
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                    <small id="gender-error" class="error-message">Please select your gender.</small>
+                </div>
+                
+                <div id="dob" class="input-group">
+                    <label for="dob" class="input-labels">DATE OF BIRTH</label>
+                    <div class="dob-inputs">
+                        <input type="number" id="day" name="day" min="1" max="31" placeholder="Day" class="dob-input">
+                        <select name="month" id="month" class="dob-input">
+                            <option value="" disabled selected style="display:none; ">Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        <input type="number" id="year" name="year" min="1900" max="2099" placeholder="Year" class="dob-input">
+                    </div>
+                    <small id="dob-error" class="error-message">Please fill out all date fields.</small>
+                </div>
+                
+                <div id="submit">
+                    <input type="submit" value="SUBMIT">
+                </div>
+    
+                <div id="cancel">
+                    <input type="button" id="cancel-btn" value="CANCEL">
+                </div>
+            </form>
+            <aside>
+                <img src="images/david-becker-crs2vlkSe98-unsplash.jpg" alt="cosmos" class="asideimg">
+            </aside>
+        </div>
+    </section>
+    <section>
+        <h2>
+            User Information Table
+        </h2>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                    <th>Date of Birth</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                <!-- User data will be dynamically added here -->
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+*{
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 20px;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+nav{
+    background-color: #eeeded;
+    color: black;
+    text-align: center;
+    width: 100%; 
+    position: fixed; 
+    top: 0; 
+
+}
+
+input {
+    font-family: Inter, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400; 
+    color: #000000; 
+}
+
+small{
+    padding-top: 4px;
+}
+
+.form-section {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 200px;
+}
+
+.form-container{
+    display: grid;
+    grid-template-columns: 1fr 1.44fr;
+    gap: 0px;
+}
+
+.asideimg{
+    width: 31.125rem;
+    height: 47rem;
+    flex-shrink: 0;
+    grid-column: 1;
+    grid-row: 1;
+    padding-right: 30px;
+    background: #F2f2f2;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr .8fr;
+    grid-template-rows: 1fr .7fr .7fr .7fr .7fr; 
+    gap: 1px; 
+    justify-content: center; 
+    align-items: center; 
+    grid-column: 2;
+    grid-row: 1;    
+    padding-right: 60px;
+    background: #F2F2F2;
+}
+
+.box{
+    flex-shrink: 0;
+    border: 1px solid #0B0D12;
+    background: #F2F2F2;
+}
+
+
+#form-title{
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    text-align: left;
+    font-size: 1.5rem;
+    margin: 0;
+    color: #0C222A;
+    font-family: "Inria Serif";
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#form-title h2{
+    margin: 0;
+    color: #0C222A;
+    font-family: "Inria Serif";
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    color: #0B0E11;
+    font-kerning: none;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 10px;
+}
+
+.input-labels{
+    padding-bottom: 20px;
+}
+
+#firstname {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#firstname .box{
+    width: 21.3125rem;
+    height: 3.1875rem;
+}
+
+#lastname {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#lastname .box{
+    width: 17.625rem;
+    height: 3.1875rem;
+}
+
+#dob{
+    grid-column: 1 / span 2;
+}
+
+#dob .dob-inputs {
+    display: flex;
+    gap: 20px;
+}
+
+.dob-inputs #day, #year, #month {
+    flex-shrink: 0;
+    border: 1px solid #0B0D12;
+    background: #F2F2F2;
+    width: 10.5625rem;
+    height: 3.1875rem;
+}
+
+#dob #day{
+    width: 100px;
+}
+#dob #month {
+    width: 150px;
+    height: 3.5rem;/* adjust as needed */
+}
+
+#month {
+    font-family: Inter, sans-serif; /* change the font family */
+    font-size: 1.3rem; /* change the font size */
+    font-weight: 400;
+    opacity: .6; /* change the font weight */
+    color: #000000; /* change the text color */
+}
+
+#dob #year {
+    width: 150px; /* adjust as needed */
+}
+
+
+#gender {
+    grid-column: 1;
+    grid-row: 4;
+    display: flex;
+    flex-direction: rows;
+    justify-content: left;
+}
+
+.gender-inputs {
+    display: flex;
+    flex-direction: rows;
+    gap: 10px;
+}
+
+#gender input[type="radio"] {
+    display: none;
+}
+
+#gender input[type="radio"] + label {
+    display: flex; 
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #0B0D12;
+    width: 6.5625rem;
+    height: 3.1875rem;
+}
+
+#gender input[type="radio"]:checked + label {
+    background: #0B0D12;
+}
+
+#submit {
+    grid-column: 1;
+    grid-row: 5;
+}
+
+#submit input{
+    flex-shrink: 0;
+    width: 18.9375rem;
+    height: 4.5125rem;
+    background-color: #070A0B; /* change the background color */
+    color: #ffffff; /* change the text color */
+    border: none; /* remove the border */
+    padding: 10px 32px; /* add some padding */
+    text-align: center; /* center the text */
+    text-decoration: none; /* remove the underline */
+    display: inline-block;
+    color: #FFF;
+    font-family: Inter;
+    font-size:  1.45rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.32rem;
+    margin: 4px 2px;
+    cursor: pointer; /* change the cursor when hovering over the button */
+    transition: background-color 0.3s ease; /* add a transition effect */
+}
+
+#cancel {
+    grid-column: 2;
+    grid-row: 5;
+}
+
+#cancel input{
+    flex-shrink: 0;
+    width: 9rem;
+    height: 2.8125rem;
+    background-color: #0D232A; /* change the background color */
+    color: #ffffff; /* change the text color */
+    border: none; /* remove the border */
+    text-align: center; /* center the text */
+    text-decoration: none; /* remove the underline */
+    display: inline-block;
+    color: #FFF;
+    font-family: Inter;
+    font-size:  1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.32rem;
+    margin: 4px 2px;
+    cursor: pointer; /* change the cursor when hovering over the button */
+    transition: background-color 0.3s ease; /* add a transition effect */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
